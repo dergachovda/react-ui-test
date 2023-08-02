@@ -16,6 +16,7 @@ import '@epam/promo/styles.css';
 import '@epam/loveship/styles.css';
 import PickerInputExample from './PickerInputExample';
 import LinkedPickerInputExample from './LinkedPickerInputExample';
+import MultiLinkedPickerInputExample from './MultiLinkedPickerInputExample';
 import { svc, getApi } from './api';
 
 type TApi = ReturnType<typeof getApi>;
@@ -50,6 +51,10 @@ function UuiEnhancedApp() {
                     <FlexRow vPadding="48" padding="24" borderBottom alignItems="top" spacing="12">
                         <p>LinkedPickerInputExample:</p>
                         <LinkedPickerInputExample />
+                    </FlexRow>
+                    <FlexRow vPadding="48" padding="24" borderBottom alignItems="top" spacing="12">
+                        <p>MultiLinkedPickerInputExample:</p>
+                        <MultiLinkedPickerInputExample />
                     </FlexRow>
                     <Snackbar />
                     <Modals />
