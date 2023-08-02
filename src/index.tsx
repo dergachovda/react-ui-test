@@ -15,6 +15,7 @@ import '@epam/uui/styles.css';
 import '@epam/promo/styles.css';
 import '@epam/loveship/styles.css';
 import PickerInputExample from './PickerInputExample';
+import LinkedPickerInputExample from './LinkedPickerInputExample';
 import { svc, getApi } from './api';
 
 type TApi = ReturnType<typeof getApi>;
@@ -43,7 +44,12 @@ function UuiEnhancedApp() {
             <UuiContext.Provider value={ services }>
                 <ErrorHandler>
                     <FlexRow vPadding="48" padding="24" borderBottom alignItems="top" spacing="12">
+                        <p>PickerInputExample:</p>
                         <PickerInputExample />
+                    </FlexRow>
+                    <FlexRow vPadding="48" padding="24" borderBottom alignItems="top" spacing="12">
+                        <p>LinkedPickerInputExample:</p>
+                        <LinkedPickerInputExample />
                     </FlexRow>
                     <Snackbar />
                     <Modals />
