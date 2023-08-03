@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FlexRow, PickerInput, FlexCell } from '@epam/promo';
-import {ArrayDataSource, useArrayDataSource} from '@epam/uui-core';
+import { useArrayDataSource } from '@epam/uui-core';
 import { languageLevels } from './Data'
 
 const fullLevelsList = languageLevels;
@@ -10,7 +10,7 @@ export default function LanguagesMultiPicker() {
         new Map<string, number>()
     );
 
-    function FilteredPickerInput(props) {
+    function FilteredPickerInput(props : any) {
         const { pickerName, pickerValueMap } = props;
         const [currentPickerValue, setCurrentPickerValue] = useState(pickerValueMap.get(pickerName));
         const filteredLanguageLevelsDataSource = useArrayDataSource(
@@ -18,8 +18,7 @@ export default function LanguagesMultiPicker() {
                 items: fullLevelsList.filter(
                         (item) => {
                             const selected = new Set(pickerValueMap.values());
-                            console.log("currentPickerValue:", currentPickerValue, "item.id", item.id, !selected.has(item.id), item.id === currentPickerValue);
-                            // const b = !selected.has(item.id) && item.id !== currentPickerValue;
+                            // console.log("currentPickerValue:", currentPickerValue, "item.id", item.id, !selected.has(item.id), item.id === currentPickerValue);
                             const b = !selected.has(item.id) || item.id === currentPickerValue;
                             return b;
                         }
