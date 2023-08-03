@@ -1,3 +1,4 @@
 # React App with UUI lib test
-https://uui.epam.com/documents
-https://github.com/epam/UUI
+UUI lib links:
+ - https://uui.epam.com/documents
+ - https://github.com/epam/UUI
